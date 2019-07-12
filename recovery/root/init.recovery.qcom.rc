@@ -1,6 +1,7 @@
 on init
     start hwservicemanager
     setprop crypto.ready 1
+    setprop ro.boot.vbmeta.avb_version ${ro.boot.avb_version}
 
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
